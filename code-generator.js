@@ -4,6 +4,7 @@ var fs = require("fs");
 generateCodeToList(4, "<Insert Name Here>");
 
 function generateCodeToList(length, name) {
+    console.log("Running... \nGenerating Code for " + name);
     //Generates Code
     var code;
     var compliant = false;
