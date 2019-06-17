@@ -1,7 +1,7 @@
 .wrapper {
     width: 100vw;
     height: 100vh;
-    background: radial-gradient(farthest-corner at 30vw 20vh, #7397a1 1%, #3f2c41 100%);
+    background: radial-gradient(farthest-corner at 30vw 20vh, #596264 1%, #f6f3f7 100%);
   }
   
   .snow {
@@ -55,4 +55,56 @@
       transform: translateY(200vh);
     }
   }
+
+  ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+  }
   
+  li {
+    float: left;
+  }
+  
+  li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+  }
+  
+  li a:hover:not(.active) {
+    background-color: #111;
+  }
+  
+  .active {
+    background-color: rgb(132, 148, 218);
+  }
+  
+  /*html,body {
+    font-family: 'Raleway', sans-serif;
+    padding: 1em 2em;
+    font-size: 18px;
+    background: #222;
+    color: #aaa
+  }*/
+  html,body {
+    font-family: 'Raleway', sans-serif;
+    /*padding: 1em 2em;*/
+    font-size: 18px;
+    background: #333;
+    color: #aaa
+  }
+  
+  h1,h2 {
+    font-weight: 200;
+    margin: 0.4em 0;
+  }
+  h1 { font-size: 3.5em; }
+  h2 {
+    color: #888;
+    font-size: 2em;
+  }
