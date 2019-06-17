@@ -1,24 +1,26 @@
 var fs = require("fs");
 
-console.log(isInList("abcd"));
+//Run Code
+generateCodeToList(4, "<Insert Name Here>");
 
-//console.log(generateCodeFromName(4, "testing"));
-
-function run(length, name) {
+function generateCodeToList(length, name) {
     //Generates Code
     var code;
     var compliant = false;
     while(compliant != true) {
-        code = generateCodeFromName(4, "Alpha Test");
+        code = generateCodeFromName(length, name);
 
         //Checks for compliance
         if(hasOneNumber(code) && !isInList(code)) 
             compliant = true;
     }
-    //Returns if good
+
+    //Adds to List if Compliant
+    fs.appendFile("./code-list.txt", "\n" + code, (err) => {
+        if (err) throw err; 
+        console.log("The list was updated with: " + code);
+    });
 }
-
-
 
 function generateCodeFromName(length, name) {
     //Generates Alphanumeric Code
@@ -32,15 +34,13 @@ function generateCodeFromName(length, name) {
     //Combines first letter of location and generated code. 
     q = q + y;
 
-    //Runs checks against code for validation
-    console.log(hasOneNumber(q));
-
-
     return q;
 }
 
 
-//check to see if code contains 1 number;
+//******************* VALIDATIONS ******************************
+
+//check to see if code contains at least 1 number;
 function hasOneNumber(str) {
     return /\d/.test(str);
   }
@@ -55,12 +55,3 @@ function isInList(str) {
     
     return false;
 }
-
-
-
-// function generateCode(length) {
-//     var y;
-//     y = Math.random().toString(36).replace('0.', '');
-//     y = y.substring(0, length);
-//     return y;
-// }
