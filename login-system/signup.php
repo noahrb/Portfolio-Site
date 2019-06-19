@@ -5,8 +5,14 @@
     <main>
         <div class="wrapper-main">
             <section class="section-default">
-                <p class="login-status">You are logged out!</p>
-                <p class="login-status">You are logged in!</p>
+                <h1>Signup</h1>
+                <form class="form-signup" action="includes/signup.inc.php" method="post">
+                    <input type="text" name="uid" placeholder="Username">
+                    <input type="text" name="mail" placeholder="E-Mail">
+                    <input type="password" name="pwd" placeholder="Password">
+                    <input type="password" name="pwd-repeat" placeholder="Repeat Password">
+                    <button type="submit" name="signup-submit">Signup</button>
+                </form>
             </section>
         </div>
     </main>
